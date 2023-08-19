@@ -1,14 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shooping</title>
+
+    <!-- daisyUI link -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- font work sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .font {
+            font-family: 'Work Sans', sans-serif;
+        }
+    </style>
 </head>
-<body>
-    <header>
-        <h1>hello vai</h1>
-        <p>second hello vai</p>
+
+<body class="font">
+    <header
+        class="flex flex-col lg:flex-row px-[180px] py-16 items-center text-center  bg-[#F9F6E2]">
+        <div>
+            <h4 class="text-3xl mb-8">---SALE FEVER---</h4>
+            <h1 class="font-bold text-5xl mb-14">Purchase TK 200 or above & get <span class="text-[#E527B2]">20%
+                    off</span> </h1>
+            <div class="flex ml-16 text-center items-center">
+                <p class="text-2xl mr-4">Use Promo Code</p>
+                <button class="rounded-lg w-[130px] h-[56px] text-2xl px-3 py-2 text-white bg-[#E527B2]">SELL200</button>
+            </div>
+        </div>
+        <img class=" w-[600px] h-[600px] ml-4" src="images/Summer 1.png" alt="">
+
     </header>
 
     <main>
@@ -25,4 +51,5 @@
 
     <script src="scripts/sale.js"></script>
 </body>
+
 </html>
