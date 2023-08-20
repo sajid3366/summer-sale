@@ -68,6 +68,9 @@ function modalBtn() {
     setTotalPrice('discount', price);
     setTotalPrice('total', price);
     document.getElementById('selected-itmes').innerText = '';
+    document.getElementById('purchase-btn').setAttribute('disabled', true);
+    document.getElementById('apply-btn').setAttribute('disabled', true);
+
 
 }
 
