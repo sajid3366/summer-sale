@@ -55,9 +55,19 @@ function addCardEntry(cardType) {
     const addEntry = document.getElementById('selected-itmes');
     const count = addEntry.childElementCount;
     const p = document.createElement('p');
-    p.classList.add('mb-4','text-xl', 'font-medium');
-    p.innerHTML = `${count+1}. ${cardType}`;
+    p.classList.add('mb-4', 'text-xl', 'font-medium');
+    p.innerHTML = `${count + 1}. ${cardType}`;
     addEntry.appendChild(p);
+
+}
+
+// modal go home btn
+function modalBtn() {
+    let price = '00.00'
+    setTotalPrice('total-price', price);
+    setTotalPrice('discount', price);
+    setTotalPrice('total', price);
+    document.getElementById('selected-itmes').innerText = '';
 
 }
 
