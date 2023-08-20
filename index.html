@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shooping</title>
+    <title>My Dookan</title>
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
 
     <!-- daisyUI link -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
@@ -52,7 +53,7 @@
                     <div class="grid grid-cols-3 gap-6">
 
                         <!-- first card -->
-                        <div class="card  cursor-pointer  bg-white rounded-lg" onclick="cardValue()">
+                        <div class="card  cursor-pointer  bg-white rounded-lg" onclick="firstCardValue(),purchaseBtn()">
                             <figure class="px-10 py-10 mx-4 my-4 rounded-lg bg-gray-200">
                                 <img src="/images/prod1.png" alt="Kitchenware" class=" w-[109px] h-[135px] " />
                             </figure>
@@ -66,11 +67,11 @@
                                 </div>
                                 <h2 class="card-title mt-1 mb-1">K. Accessories</h2>
                                 <p class="text-[#11111180]"><span id="card1-price">39.55</span> TK</p>
-                                
+
                             </div>
                         </div>
                         <!-- second card -->
-                        <div class="card cursor-pointer bg-white rounded-lg" onclick="handleClickBtn(this)">
+                        <div class="card cursor-pointer bg-white rounded-lg" onclick="secondCardValue(), purchaseBtn()">
                             <figure class="px-10 py-10 mx-4 my-4 rounded-lg bg-gray-200">
                                 <img src="/images/prod2.png" alt="Kitchenware" class=" w-[150px] h-[135px] " />
                             </figure>
@@ -83,12 +84,12 @@
                                     <i class="fa-regular fa-star"></i>
                                 </div>
                                 <h2 class="card-title mt-1 mb-1">K. Accessories</h2>
-                                <p class="text-[#11111180]">25.00 TK</p>
+                                <p class="text-[#11111180]"><span id="card2-price">25.00</span> TK</p>
 
                             </div>
                         </div>
                         <!-- third card -->
-                        <div class="card cursor-pointer bg-white rounded-lg" onclick="handleClickBtn(this)">
+                        <div class="card cursor-pointer bg-white rounded-lg" onclick="thirdCardValue(), purchaseBtn()">
                             <figure class="px-10 py-10 mx-4 my-4 rounded-lg bg-gray-200">
                                 <img src="/images/prod3.png" alt="Kitchenware" class=" w-[148px] h-[135px] " />
                             </figure>
@@ -101,7 +102,7 @@
                                     <i class="fa-regular fa-star"></i>
                                 </div>
                                 <h2 class="card-title mt-1 mb-1">Home Cooker</h2>
-                                <p class="text-[#11111180]">49.00 TK</p>
+                                <p class="text-[#11111180]"><span id="card3-price">49.00</span> TK</p>
 
                             </div>
                         </div>
@@ -114,7 +115,7 @@
                     <div class="grid grid-cols-3 gap-12">
 
                         <!-- first card -->
-                        <div class="card cursor-pointer bg-white rounded-lg">
+                        <div class="card cursor-pointer bg-white rounded-lg" onclick="fourthCardValue(), purchaseBtn()">
                             <figure class="px-10 py-10 mx-4 my-4 rounded-lg bg-gray-200">
                                 <img src="/images/prod4.png" alt="Kitchenware" class=" w-[163px] h-[135px] " />
                             </figure>
@@ -127,12 +128,12 @@
                                     <i class="fa-regular fa-star"></i>
                                 </div>
                                 <h2 class="card-title mt-1 mb-1">Sports Back Cap</h2>
-                                <p class="text-[#11111180]">49.00 TK</p>
+                                <p class="text-[#11111180]"><span id="card4-price">49.00</span> TK</p>
 
                             </div>
                         </div>
                         <!-- second card -->
-                        <div class="card cursor-pointer bg-white rounded-lg">
+                        <div class="card cursor-pointer bg-white rounded-lg" onclick="fifthCardValue(), purchaseBtn()">
                             <figure class="px-10 py-10 mx-4 my-4 rounded-lg bg-gray-200">
                                 <img src="/images/prod5.png" alt="Kitchenware" class=" w-[120px] h-[135px] " />
                             </figure>
@@ -145,12 +146,12 @@
                                     <i class="fa-regular fa-star"></i>
                                 </div>
                                 <h2 class="card-title mt-1 mb-1">Full Jersey Set</h2>
-                                <p class="text-[#11111180]">69.00 TK</p>
+                                <p class="text-[#11111180]"><span id="card5-price">69.00</span> TK</p>
 
                             </div>
                         </div>
                         <!-- third card -->
-                        <div class="card cursor-pointer bg-white rounded-lg">
+                        <div class="card cursor-pointer bg-white rounded-lg" onclick="sixthCardValue(), purchaseBtn()">
                             <figure class="px-10 py-10 mx-4 my-4 rounded-lg bg-gray-200">
                                 <img src="/images/prod6.png" alt="Kitchenware" class=" w-[146px] h-[135px] " />
                             </figure>
@@ -163,7 +164,7 @@
                                     <i class="fa-regular fa-star"></i>
                                 </div>
                                 <h2 class="card-title mt-1 mb-1">Sports cates</h2>
-                                <p class="text-[#11111180]">159.00 TK</p>
+                                <p class="text-[#11111180]"><span id="card6-price">159.00</span> TK</p>
 
                             </div>
                         </div>
@@ -176,7 +177,7 @@
                     <div class="grid grid-cols-3 gap-12">
 
                         <!-- first card -->
-                        <div class="card cursor-pointer bg-white rounded-lg">
+                        <div class="card cursor-pointer bg-white rounded-lg" onclick="seventhCardValue(), purchaseBtn()">
                             <figure class="px-10 py-10 mx-4 my-4 rounded-lg bg-gray-200">
                                 <img src="/images/prod7.png" alt="Kitchenware" class=" w-[146px] h-[135px] " />
                             </figure>
@@ -189,12 +190,12 @@
                                     <i class="fa-regular fa-star"></i>
                                 </div>
                                 <h2 class="card-title mt-1 mb-1">Single Relax Chair</h2>
-                                <p class="text-[#11111180]">185.00 TK</p>
+                                <p class="text-[#11111180]"><span id="card7-price">185.00</span> TK</p>
 
                             </div>
                         </div>
                         <!-- second card -->
-                        <div class="card cursor-pointer bg-white rounded-lg">
+                        <div class="card cursor-pointer bg-white rounded-lg" onclick="eighthCardValue(), purchaseBtn()">
                             <figure class="px-10 py-10 mx-4 my-4 rounded-lg bg-gray-200">
                                 <img src="/images/prod8.png" alt="Kitchenware" class=" w-[120px] h-[135px] " />
                             </figure>
@@ -207,12 +208,12 @@
                                     <i class="fa-regular fa-star"></i>
                                 </div>
                                 <h2 class="card-title mt-1 mb-1">Children play</h2>
-                                <p class="text-[#11111180]">299.00 TK</p>
+                                <p class="text-[#11111180]"><span id="card8-price">299.00</span> TK</p>
 
                             </div>
                         </div>
                         <!-- third card -->
-                        <div class="card cursor-pointer bg-white rounded-lg">
+                        <div class="card cursor-pointer bg-white rounded-lg" onclick="ninethCardValue(), purchaseBtn()">
                             <figure class="px-10 py-10 mx-4 my-4 rounded-lg bg-gray-200">
                                 <img src="/images/prod9.png" alt="Kitchenware" class=" w-[162px] h-[135px] " />
                             </figure>
@@ -225,7 +226,7 @@
                                     <i class="fa-regular fa-star"></i>
                                 </div>
                                 <h2 class="card-title mt-1 mb-1">Flexible Sofa</h2>
-                                <p class="text-[#11111180]">339.00 TK</p>
+                                <p class="text-[#11111180]"><span id="card9-price">339.00</span> TK</p>
 
                             </div>
                         </div>
@@ -234,23 +235,32 @@
                     </div>
                 </div>
             </div>
-            <div class="w-[300px] mx-auto mt-14 ">
-                <div class="bg-white rounded-lg px-5 py-6">
+            <div class="w-[330px] mx-auto mt-14 ">
+                <div class="bg-white rounded-lg px-4 py-6">
                     <h2 class="text-2xl font-medium mb-3">Have coupon?</h2>
-                    <input class="rounded-lg border text-xl px-2 py-2 mb-4" type="text" name="" id=""
-                        placeholder="Cupon code">
-                    <button class="btn-color rounded-lg w-[130px] h-[56px] text-2xl px-3 py-2 text-white " disabled>Apply</button>
+                    <div class="form-control">
+                        <div class="input-group">
+                          <input id="apply-cupon"  type="text" placeholder="Cupon code" class="input input-bordered w-[200px]" />
+                          <button id="apply-btn" class="btn btn-square btn-color text-white w-[80px]" disabled>
+                            Apply
+                            
+                          </button>
+                        </div>
+                      </div>
                 </div>
                 <div class="bg-white rounded-lg px-5 py-6 mt-8">
-                    <div id="selected-itmes"></div>
+                    <div id="selected-itmes">
+
+                    </div>
                     <hr class="mt-6">
 
-                    <p class="leading-[50px] text-2xl font-medium mt-4 mb-4">Total price: <span id="total-price">00.00</span>TK<br>Discount:
-                        <span>00.00</span>TK<br>Total: <span id="total">00.00</span>TK
+                    <p class="leading-[50px] text-2xl font-medium mt-4 mb-4">Total price: <span
+                            id="total-price">00.00</span> TK<br>Discount:
+                        <span id="discount">00.00</span> TK<br>Total: <span id="total">00.00</span> TK
                     </p>
                     <hr>
                     <!-- Open the modal using ID.showModal() method -->
-                    <button class="btn btn-color mt-6 w-full text-white" onclick="my_modal_1.showModal()">Make
+                    <button id="purchase-btn" class="btn btn-color mt-6 w-full text-white" onclick="my_modal_1.showModal()" disabled>Make
                         Purchase</button>
                     <dialog id="my_modal_1" class="modal ">
                         <form method="dialog" class="modal-box ">
