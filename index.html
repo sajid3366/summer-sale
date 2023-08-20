@@ -30,27 +30,27 @@
 </head>
 
 <body class="font bg-[#F8F8F8]">
-    <header class="flex flex-col lg:flex-row px-[180px] py-16 items-center text-center  bg-[#F9F6E2]">
+    <header class="flex flex-col lg:flex-row px-10 md:px-32  lg:px-[180px] py-16 items-center text-center  bg-[#F9F6E2]">
         <div>
             <h4 class="text-3xl mb-8">---SALE FEVER---</h4>
-            <h1 class="font-bold text-5xl mb-14">Purchase TK 200 or above & get <span class="text-[#E527B2]">20%
+            <h1 class="font-bold text-3xl md:text-5xl lg:text-5xl mb-6 lg:mb-14">Purchase TK 200 or above & get <span class="text-[#E527B2]">20%
                     off</span> </h1>
-            <div class="flex ml-16 text-center items-center">
-                <p class="text-2xl mr-4">Use Promo Code</p>
+            <div class="lg:flex lg:ml-16 text-center items-center mb-8">
+                <p class="text-2xl mb-4 mr-4">Use Promo Code</p>
                 <button
                     class="rounded-lg w-[130px] h-[56px] text-2xl px-3 py-2 text-white bg-[#E527B2]">SELL200</button>
             </div>
         </div>
-        <img class=" w-[600px] h-[600px] ml-4" src="images/Summer 1.png" alt="">
+        <img class="w-[400px] h-[400px] lg:w-[600px] lg:h-[600px] ml-4" src="images/Summer 1.png" alt="">
 
     </header>
 
     <main>
-        <section class="flex flex-1 mx-[150px] mt-24 gap-x-4">
+        <section class="lg:flex flex-1 px-16 lg:mx-[90px] mt-24 gap-x-4">
             <div>
                 <div>
                     <h1 class="text-4xl font-semibold mb-4 ">Kitchenware</h1>
-                    <div class="grid grid-cols-3 gap-6">
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
 
                         <!-- first card -->
                         <div class="card  cursor-pointer  bg-white rounded-lg" onclick="firstCardValue(),purchaseBtn()">
@@ -112,7 +112,7 @@
                 </div>
                 <div class="my-12">
                     <h1 class="text-4xl font-semibold mb-4 ">Sportswear</h1>
-                    <div class="grid grid-cols-3 gap-12">
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
 
                         <!-- first card -->
                         <div class="card cursor-pointer bg-white rounded-lg" onclick="fourthCardValue(), purchaseBtn()">
@@ -174,7 +174,7 @@
                 </div>
                 <div>
                     <h1 class="text-4xl font-semibold mb-4 ">Furniture</h1>
-                    <div class="grid grid-cols-3 gap-12">
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
 
                         <!-- first card -->
                         <div class="card cursor-pointer bg-white rounded-lg"
@@ -236,13 +236,13 @@
                     </div>
                 </div>
             </div>
-            <div class="w-[330px] mx-auto mt-14 ">
+            <div class=" mx-auto mt-14 ">
                 <div class="bg-white rounded-lg px-4 py-6">
                     <h2 class="text-2xl font-medium mb-3">Have coupon?</h2>
                     <div class="form-control">
                         <div class="input-group">
                             <input onclick="applyBtn()" id="apply-cupon" type="text" placeholder="Cupon code"
-                                class="input input-bordered w-[200px]" />
+                                class="input input-bordered w-[190px] md:w-[300px]" />
                             <button id="apply-btn" class="btn btn-square btn-color text-white w-[80px]" disabled>
                                 Apply
 
@@ -265,11 +265,11 @@
                     <button id="purchase-btn" class="btn btn-color mt-6 w-full text-white"
                         onclick="my_modal_1.showModal()" disabled>Make
                         Purchase</button>
-                    <dialog id="my_modal_1" class="modal ">
+                    <dialog id="my_modal_1" class="modal w-[400px] m-auto lg:w-full">
                         <form method="dialog" class="modal-box ">
                             <div class="flex justify-center  py-12"><img src="images/congo.png" alt=""></div>
                             <div class="text-center">
-                                <p class="py-4 font-bold text-5xl">Congratulations</p>
+                                <p class="py-4 font-bold text-3xl lg:text-5xl">Congratulations</p>
                                 <p class="text-xl text-[#11111180]">Your Purchase the product</p>
                             </div>
                             <div class="modal-action justify-center">
