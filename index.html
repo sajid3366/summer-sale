@@ -66,7 +66,7 @@
                                     <i class="fa-regular fa-star"></i>
                                 </div>
                                 <h2 class="card-title mt-1 mb-1">K. Accessories</h2>
-                                <p class="text-[#11111180]"><span id="card1-price">39.55</span> TK</p>
+                                <p class="text-[#11111180]"><span id="card1-price">39.00</span> TK</p>
 
                             </div>
                         </div>
@@ -241,7 +241,7 @@
                     <h2 class="text-2xl font-medium mb-3">Have coupon?</h2>
                     <div class="form-control">
                         <div class="input-group">
-                            <input id="apply-cupon" type="text" placeholder="Cupon code"
+                            <input onclick="applyBtn()" id="apply-cupon" type="text" placeholder="Cupon code"
                                 class="input input-bordered w-[200px]" />
                             <button id="apply-btn" class="btn btn-square btn-color text-white w-[80px]" disabled>
                                 Apply
@@ -257,8 +257,8 @@
                     <hr class="mt-6">
 
                     <p class="leading-[50px] text-2xl font-medium mt-4 mb-4">Total price: <span
-                            id="total-price">00.00</span> TK<br>Discount:
-                        <span id="discount">00.00</span> TK<br>Total: <span id="total">00.00</span> TK
+                            id="total-price" class="text-[#11111180]">00.00</span> <span class="text-[#11111180]">TK</span><br>Discount:
+                        <span class="text-[#11111180]" id="discount">00.00</span> <span class="text-[#11111180]">TK</span><br>Total: <span class="text-[#11111180]" id="total">00.00</span> <span class="text-[#11111180]">TK</span>
                     </p>
                     <hr>
                     <!-- Open the modal using ID.showModal() method -->
