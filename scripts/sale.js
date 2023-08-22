@@ -12,31 +12,36 @@ function setTotalPrice(totalPrice, price) {
 
 }
 
-// apply btn
-document.getElementById('apply-cupon').addEventListener('keyup', function (event) {
-    const text = event.target.value;
-    if (text === 'SELL200') {
+// for discount
+function discount() {
+    const previousTotalValue = getCardValue('total-price');
+    if (previousTotalValue >= 200) {
+
         document.getElementById('apply-btn').removeAttribute('disabled');
-        // for discount
-        document.getElementById('apply-btn').addEventListener('click', function () {
-            const previousTotalValue = getCardValue('total-price');
-            if (previousTotalValue >= 200) {
-                const discount = (previousTotalValue * 0.2).toFixed(2);
-                const newTotalPrice = (previousTotalValue - discount).toFixed(2);
-                const setDiscount = setTotalPrice('discount', discount);
-                const total = setTotalPrice('total', newTotalPrice);
-                const cuponInputField = document.getElementById('apply-cupon');
-                const cuponInputFieldValue = cuponInputField.value;
-                cuponInputField.value = '';
+        document.getElementById('apply-cupon').addEventListener('keyup', function (event) {
+            const text = event.target.value;
+            if (text == 'SELL200') {
+                document.getElementById('apply-btn').addEventListener('click', function () {
+
+                    const discount = (previousTotalValue * 0.2).toFixed(2);
+                    const newTotalPrice = (previousTotalValue - discount).toFixed(2);
+                    const setDiscount = setTotalPrice('discount', discount);
+                    const total = setTotalPrice('total', newTotalPrice);
+                    const cuponInputField = document.getElementById('apply-cupon');
+                    const cuponInputFieldValue = cuponInputField.value;
+                    cuponInputField.value = '';
+                })
+
             }
 
-        })
+        });
+
+
     }
     else {
         document.getElementById('apply-btn').setAttribute('disabled', true);
     }
-
-});
+}
 
 // purchase btn
 function purchaseBtn() {
@@ -83,6 +88,8 @@ function firstCardValue() {
     const totalPrice = setTotalPrice('total-price', totalCartPrice);
     const total = setTotalPrice('total', totalCartPrice);
     addCardEntry('K. Accessories');
+    discount();
+
 
 
 }
@@ -94,6 +101,7 @@ function secondCardValue() {
     const totalPrice = setTotalPrice('total-price', totalCartPrice);
     const total = setTotalPrice('total', totalCartPrice);
     addCardEntry('K. Accessories');
+    discount();
 
 
 
@@ -106,8 +114,7 @@ function thirdCardValue() {
     const totalPrice = setTotalPrice('total-price', totalCartPrice);
     const total = setTotalPrice('total', totalCartPrice);
     addCardEntry('Home Cooker');
-
-
+    discount();
 
 }
 function fourthCardValue() {
@@ -118,6 +125,7 @@ function fourthCardValue() {
     const totalPrice = setTotalPrice('total-price', totalCartPrice);
     const total = setTotalPrice('total', totalCartPrice);
     addCardEntry('Sports Back Cap');
+    discount();
 
 
 }
@@ -129,6 +137,7 @@ function fifthCardValue() {
     const totalPrice = setTotalPrice('total-price', totalCartPrice);
     const total = setTotalPrice('total', totalCartPrice);
     addCardEntry('Full Jersey Set');
+    discount();
 
 
 }
@@ -140,6 +149,7 @@ function sixthCardValue() {
     const totalPrice = setTotalPrice('total-price', totalCartPrice);
     const total = setTotalPrice('total', totalCartPrice);
     addCardEntry('Sports cates');
+    discount();
 
 
 }
@@ -151,6 +161,7 @@ function seventhCardValue() {
     const totalPrice = setTotalPrice('total-price', totalCartPrice);
     const total = setTotalPrice('total', totalCartPrice);
     addCardEntry('Single Relax Chair');
+    discount();
 
 
 }
@@ -162,6 +173,7 @@ function eighthCardValue() {
     const totalPrice = setTotalPrice('total-price', totalCartPrice);
     const total = setTotalPrice('total', totalCartPrice);
     addCardEntry('Children play');
+    discount();
 
 
 }
@@ -173,7 +185,6 @@ function ninethCardValue() {
     const totalPrice = setTotalPrice('total-price', totalCartPrice);
     const total = setTotalPrice('total', totalCartPrice);
     addCardEntry('Flexible Sofa');
-
-
+    discount();
 }
 
